@@ -14,11 +14,10 @@ class SplashScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash_screen)
 
-            // Delayed execution to start the main activity after splashTimeOut milliseconds
             Handler(Looper.getMainLooper()).postDelayed({
-                val intent = Intent(this, MainActivity::class.java) // Replace with your main activity
+                val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
-                finish() // Close the splash screen activity
+                finish()
             }, splashTimeOut)
         }
 
